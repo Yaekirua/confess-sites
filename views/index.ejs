@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO CONFESSIONS SITES</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>CONFESSIONS SITES ❤️</h1>
+        <form action="/submit" method="POST" id="letterForm">
+            <textarea name="letter" id="letterInput" rows="5" placeholder="Write your letter..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <button id="adminPageBtn" onclick="location.href='/admin';">Go to Admin Page</button>
+    </header>
+
+    <main>
+        <% if (letters.length > 0) { %>
+            <% letters.forEach(letter => { %>
+                <div class="letter">
+                    <p><%= letter.content %></p>
+                    <small><%= new Date(letter.timestamp).toLocaleString() %></small>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>No letters yet. Be the first to write one!</p>
+        <% } %>
+    </main>
+
+    <script>
+        const letterInput = document.getElementById("letterInput");
+        const letterForm = document.getElementById("letterForm");
+
+        letterInput.addEventListener("keydown", function (event) {
+            // Check if the key is "Enter" and ensure Shift+Enter adds a new line
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault(); // Prevent default behavior (new line)
+                letterForm.submit();   // Submit the form
+            }
+        });
+    </script>
+</body>
+</html>

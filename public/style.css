@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212; /* Dark black background */
+    color: #e0e0e0; /* Light gray text */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a2e; /* Dark blue background */
+    color: #ffffff; /* White text */
+    box-shadow: 0 0 15px #0074d9; /* Soft blue glow */
+}
+
+header h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #0074d9, 0 0 20px #0074d9; /* Glowing text */
+}
+
+header form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    width: 90%;
+    max-width: 600px;
+    height: 100px;
+    border: 1px solid #333333; /* Subtle border for contrast */
+    border-radius: 5px;
+    background: #1e1e2f; /* Slightly lighter dark background */
+    color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    box-shadow: inset 0 0 5px #0074d9; /* Glowing effect inside the textarea */
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+textarea:focus {
+    box-shadow: 0 0 15px #0074d9; /* Glow when focused */
+    transform: scale(1.02); /* Slight zoom effect */
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background: #30475e; /* Dark blue button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #30475e; /* Subtle glow effect */
+}
+
+button:hover {
+    background: #0074d9; /* Bright blue hover effect */
+    box-shadow: 0 0 20px #0074d9; /* Stronger glow on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.letter {
+    background: #1e1e2f; /* Slightly lighter background for contrast */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4), 0 0 10px #0074d9; /* Subtle shadow with blue glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.letter:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 15px #0074d9; /* Glow intensifies */
+}
+
+.letter small {
+    color: #9e9e9e; /* Muted gray for timestamps or small details */
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+}
+#adminPageBtn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#adminPageBtn:hover {
+    background-color: #ff4c4c;
+}
