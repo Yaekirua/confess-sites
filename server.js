@@ -10,7 +10,7 @@ const ADMIN_USERNAME = 'admin';
 const ADMIN_PASSWORD = 'password123';
 
 // Database setup
-mongoose.connect('mongodb+srv://hizalhaziq:9006@cluster0.oqp0oqe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://hizalhaziq:9006@cluster0.oqp0oqe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -99,10 +99,3 @@ app.post('/delete/:id', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
-
-
